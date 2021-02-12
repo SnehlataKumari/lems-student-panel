@@ -1,0 +1,412 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="mdk-header-layout__content page-content">
+    <div class="pt-48pt pb-48pt">
+        <div class="dashboard-section">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="user-card">
+                        <div class="dsb-user-name"> 
+                            <ul>
+                                <li>
+                                    <h3 class="mb-0 ml-3"> {{greetingMsg}}, <span>{{authservice.user.firstName}}</span> </h3>
+                                </li>
+                                <li>
+                                    <button class="enroll-btn">
+                                        <i class="fa fa-plus ml-1 white"></i> Enroll More
+                                    </button>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="user-card">
+                        <div class="dbs-upcoming-class">
+                            <div class="row">
+                                 <div class="col-md-4">
+                                    <div class="dbs-upcoming-class-main">
+                                          <div class="dbs-upcoming-title">
+                                               <h4 class="mb-0">Upcoming Class</h4>
+                                          </div>
+                                          <div class="dbs-upcomming-details">
+                                               <img src="assets/images/icon/calender.svg" width="25px" class="mb-3">
+                                               <p class="mb-4">Upcoming Class will appear here</p>
+                                               <button class="enroll-course-btn">Enroll Courses
+                                            </button>
+                                          </div>
+                                     </div>    
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="dbs-upcoming-class-main">
+                                          <div class="dbs-upcoming-title">
+                                               <h4 class="mb-0">Upcoming Class</h4>
+                                          </div>
+                                          <div class="dbs-upcomming-details">
+                                               <img src="assets/images/icon/calender.svg" width="25px" class="mb-3">
+                                               <p class="mb-4">Upcoming Class will appear here</p>
+                                               <button class="enroll-course-btn">Enroll Courses
+                                            </button>
+                                          </div>
+                                     </div>    
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="dbs-upcoming-class-main">
+                                          <div class="dbs-upcoming-title">
+                                               <h4 class="mb-0">Upcoming Class</h4>
+                                          </div>
+                                          <div class="dbs-upcomming-details">
+                                            <img src="assets/images/icon/calender.svg" width="25px" class="mb-3">
+                                               <p class="mb-4">Upcoming Class will appear here</p>
+                                               <button class="enroll-course-btn">Enroll Courses
+                                            </button>
+                                          </div>
+                                     </div>    
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-card">
+                        <div class="dsb-test-session">
+                             <div class="dsb-test-session-inner">
+                                 <div class="row">
+                                     <div class="col-md-7">
+                                            <ul class="nav nav-pills">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#test">Tests</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#past">Past Session</a>
+                                                </li>
+                                            </ul>
+                                     </div>
+                                     <div class="offset-md-2 col-md-3">
+                                         <div class="filter-select">
+                                             <select class="form-control">
+                                                 <option>All Subjects</option>
+                                                 <option>All Subjects</option>
+                                             </select>
+                                         </div>
+                                     </div> 
+                                 </div>
+                             </div>
+                             <div class="tab-content mt-4 text-70">
+                                <div class="tab-pane active" id="test">
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image">
+                                            <img src="assets/images/icon/test.svg" alt="" width="24px">
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <div class="new-latest">
+                                                <img src="assets/images/icon/new.svg" class="img-fluid">
+                                            </div>
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <p>CBSC 9 Full Syllabus - Social - Social Science</p>
+                                            <div class="dbs-rep">
+                                                <ul>
+                                                    <li>
+                                                        <p>Shared On <span>08 Jun</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            View Report
+                                                       </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image">
+                                            <img src="assets/images/icon/test.svg" alt="" width="24px">
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <p>CBSC 9 Full Syllabus - Social - Social Science</p>
+                                            <div class="dbs-rep">
+                                                <ul>
+                                                    <li>
+                                                        <p>Shared On <span>08 Jun</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            View Report
+                                                       </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image">
+                                            <img src="assets/images/icon/test.svg" alt="" width="24px">
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <p>CBSC 9 Full Syllabus - Social - Social Science</p>
+                                            <div class="dbs-rep">
+                                                <ul>
+                                                    <li>
+                                                        <p>Shared On <span>08 Jun</span></p>
+                                                    </li>
+                                                    <li>
+                                                       <a routerLink="" class="yellow fs-16">Pending Evaluation</a>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image">
+                                            <img src="assets/images/icon/test.svg" alt="" width="24px">
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <p>CBSC 9 Full Syllabus - Social - Social Science</p>
+                                            <div class="dbs-rep">
+                                                <ul>
+                                                    <li>
+                                                        <p>Shared On <span>08 Jun</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            View Report
+                                                       </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image">
+                                            <img src="assets/images/icon/test.svg" alt="" width="24px">
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <p>CBSC 9 Full Syllabus - Social - Social Science</p>
+                                            <div class="dbs-rep">
+                                                <ul>
+                                                    <li>
+                                                        <p>Shared On <span>08 Jun</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            View Report
+                                                       </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="past">
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image1">
+                                            <p class="mb-2 tutr">Aug</p>
+                                            <h6 class="mb-0 theme">04</h6> 
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <div class="row"> 
+                                                <div class="col-md-3">
+                                                    <div class="dbs-past">
+                                                        <p class="green mb-2 fw-600"><i class="green mr-1 fa fa-clock-o" aria-hidden="true"></i><span class="green">2.00-2.45 PM</span></p>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            Replay
+                                                       </button> 
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="dbs-past-tutor">
+                                                        <p class="mb-2"><span class="mr-1 tutr fw-600">Tutor:</span><span class="theme fw-600">Rishibha Lillore</span></p>
+                                                        <button  routerLink="" class="btn-border-yellow">
+                                                            Get Notes
+                                                       </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image1">
+                                            <p class="mb-2 tutr">Aug</p>
+                                            <h6 class="mb-0 theme">04</h6> 
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <div class="row"> 
+                                                <div class="col-md-3">
+                                                    <div class="dbs-past">
+                                                        <p class="green mb-2 fw-600"><i class="green mr-1 fa fa-clock-o" aria-hidden="true"></i><span class="green">2.00-2.45 PM</span></p>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            Replay
+                                                       </button> 
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="dbs-past-tutor">
+                                                        <p class="mb-2"><span class="mr-1 tutr fw-600">Tutor:</span><span class="theme fw-600">Rishibha Lillore</span></p>
+                                                        <button  routerLink="" class="btn-border-yellow">
+                                                            Get Notes
+                                                       </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image1">
+                                            <p class="mb-2 tutr">Aug</p>
+                                            <h6 class="mb-0 theme">04</h6> 
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <div class="row"> 
+                                                <div class="col-md-3">
+                                                    <div class="dbs-past">
+                                                        <p class="green mb-2 fw-600"><i class="green mr-1 fa fa-clock-o" aria-hidden="true"></i><span class="green">2.00-2.45 PM</span></p>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            Replay
+                                                       </button> 
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="dbs-past-tutor">
+                                                        <p class="mb-2"><span class="mr-1 tutr fw-600">Tutor:</span><span class="theme fw-600">Rishibha Lillore</span></p>
+                                                        <button  routerLink="" class="btn-border-yellow">
+                                                            Get Notes
+                                                       </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image1">
+                                            <p class="mb-2 tutr">Aug</p>
+                                            <h6 class="mb-0 theme">04</h6> 
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <div class="row"> 
+                                                <div class="col-md-3">
+                                                    <div class="dbs-past">
+                                                        <p class="green mb-2 fw-600"><i class="green mr-1 fa fa-clock-o" aria-hidden="true"></i><span class="green">2.00-2.45 PM</span></p>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            Replay
+                                                       </button> 
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="dbs-past-tutor">
+                                                        <p class="mb-2"><span class="mr-1 tutr fw-600">Tutor:</span><span class="theme fw-600">Rishibha Lillore</span></p>
+                                                        <button  routerLink="" class="btn-border-yellow">
+                                                            Get Notes
+                                                       </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="dbs-session-list d-flex">
+                                        <div class="dbs-session-image1">
+                                            <p class="mb-2 tutr">Aug</p>
+                                            <h6 class="mb-0 theme">04</h6> 
+                                        </div> 
+                                        <div class="dbs-session-text">
+                                            <h5>CBSE-9 Social Science-What is Democracy ?</h5>
+                                            <div class="row"> 
+                                                <div class="col-md-3">
+                                                    <div class="dbs-past">
+                                                        <p class="green mb-2 fw-600"><i class="green mr-1 fa fa-clock-o" aria-hidden="true"></i><span class="green">2.00-2.45 PM</span></p>
+                                                        <button  routerLink="" class="btn-border-green">
+                                                            Replay
+                                                       </button> 
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="dbs-past-tutor">
+                                                        <p class="mb-2"><span class="mr-1 tutr fw-600">Tutor:</span><span class="theme fw-600">Rishibha Lillore</span></p>
+                                                        <button  routerLink="" class="btn-border-yellow">
+                                                            Get Notes
+                                                       </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-3">
+                    <div class="user-card">
+                        <div class="dbs-right"> 
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Enroll Courses</span>
+                            </button> 
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Library</span>
+                            </button>
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Enroll Courses</span>
+                            </button>
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Library</span>
+                            </button>
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Enroll Courses</span>
+                            </button>
+                            <button  routerLink="" class="btn mb-2 btn-block btn-filled form-btn caps">
+                                <span>Library</span>
+                            </button>
+                        </div>
+                        <div class="dbs-enrol-course">
+                            <h5>Enrolled Courses</h5>
+                            <div class="dbs-enrol-dtl">
+                                 <h3>A Gift of Chappals</h3>
+                                 <p>Completed 27 Jul - 05 Aug</p>
+                                 <button  routerLink="" class="btn-border">
+                                     View Details
+                                </button>
+                            </div>
+                            <div class="dbs-enrol-dtl">
+                                <h3>Live Doubt Solving - CBSE 9</h3>
+                                <p>Completed 27 Jul - 05 Aug</p>
+                                <button  routerLink="" class="btn-border">
+                                    View Details
+                               </button>
+                           </div>
+                           <div class="dbs-enrol-dtl">
+                                <h3>Live Doubt Solving - CBSE 9</h3>
+                                <p>Completed 27 Jul - 05 Aug</p>
+                                <button  routerLink="" class="btn-border">
+                                    View Details
+                               </button>
+                            </div>
+                            <div class="dbs-enrol-dtl">
+                                <h3>Live Doubt Solving - CBSE 9</h3>
+                                <p>Completed 27 Jul - 05 Aug</p>
+                                <button  routerLink="" class="btn-border">
+                                    View Details
+                               </button>
+                           </div>
+                           <div class="dbs-enrol-dtl">
+                                <h3>Live Doubt Solving - CBSE 9</h3>
+                                <p>Completed 27 Jul - 05 Aug</p>
+                                <button  routerLink="" class="btn-border">
+                                    View Details
+                               </button>
+                            </div>
+                            <button  routerLink="" class="btn-full mt-3 pointer">
+                                View All Courses
+                           </button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.5" height="60.75" viewBox="0 0 61.5 60.75">
+  <g id="new" transform="translate(-319 -386)">
+    <path id="Rectangle_17599" data-name="Rectangle 17599" d="M3.5,0H15a0,0,0,0,1,0,0V3.5a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A3.5,3.5,0,0,1,3.5,0Z" transform="translate(319 386)" fill="#02a243"/>
+    <path id="Rectangle_17600" data-name="Rectangle 17600" d="M0,0H15a0,0,0,0,1,0,0V3.5a0,0,0,0,1,0,0H3.5A3.5,3.5,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(377 446.75) rotate(-90)" fill="#02a243"/>
+    <path id="Path_104862" data-name="Path 104862" d="M326.016,385.516a20.84,20.84,0,0,1,2.219,1.578,14.585,14.585,0,0,1,1.688,1.625c1.064,1.1,47.3,47.469,47.3,47.469s.609.547,1.594,1.641,1.688,2.016,1.688,2.016l-.1-50.219a5.412,5.412,0,0,0-.646-2.725,4,4,0,0,0-3.394-1.382Z" transform="translate(0 0.487)" fill="#01d356"/>
+    <text id="NEW-2" data-name="NEW" transform="translate(358.172 407.828) rotate(45)" fill="#fff" font-size="8" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-9.996" y="0">NEW</tspan></text>
+  </g>
+</svg>

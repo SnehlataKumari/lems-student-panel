@@ -1,0 +1,120 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="mdk-header-layout__content page-content">
+    <div class="profile-view" style="background-image: url(assets/images/icon/pattern.svg);
+    background-repeat: no-repeat;">
+        <div class="row">
+            <div class="col-md-8">
+                 <div class="profile-view-left">
+                       <div class="d-flex">
+                        <div class="add-box gal-box image-upload im-50">
+                            <img id="prof" class="avatar-lg rounded-circle" [src]="user.profileImage ? user.profileImage : 'assets/images/icon/user_placeholder_header.svg'" class="gal-result">
+                            <label for="file-input" class="icon-rgt">
+                                <i class="fa fa-camera" aria-hidden="true"></i>
+                                <!-- <img class="assets/images/icon/camera.svg"> -->
+                            </label>    
+                            <input type="file" class="gal-file" id="file-input">
+                        </div>
+
+                        <div class="view-title">
+                              <h3>{{user.firstName}} {{user.lastName}}</h3>
+                        </div>
+                       </div> 
+                 </div> 
+            </div> 
+            <div class="col-md-4">
+                <div class="text-right mt-3">
+                    <button type="text" class="btn btn-white-gard mr-4 caps" routerLink="/home/profile-edit">
+                        Edit Profile
+                    </button>
+                    <button type="text" class="btn btn-success-gard caps" data-target="#change" data-toggle="modal">
+                        Change Password 
+                    </button>
+                </div>
+            </div> 
+        </div> 
+    </div>   
+    <div class="pt-48pt pb-48pt">
+       <div class="container-fluid">
+            <div class="profile-card padding-33"> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="profile-view-ed-info border-right pb-4">
+                            <h3>EDUCATION INFO</h3>
+                            <ul>
+                                <li><span>Class</span></li>
+                                <li><span>{{student?.education?.grade || 'NA'}}</span></li>
+                                <li><span>Board</span></li>
+                                <li><span>{{student?.education?.board || 'NA'}}</span></li>
+                                <li><span>Target</span></li>
+                                <li><span>{{student?.education?.targetExam || 'NA'}}</span></li>
+                            </ul>
+                        </div>  
+                        <div class="profile-view-ed-info border-right" *ngIf="student.guardians && student.guardians.length">
+                            <h3>PARENT INFO</h3>
+                            <ul *ngFor="let parent of student?.guardians">
+                                <li><span>Parent Email</span></li>
+                                <li><span>{{parent.email}}</span></li>
+                                <li><span>Parent Contact Number</span></li>
+                                <li><span>{{parent.mobileNumber}}</span></li>
+                            </ul>
+                        </div>  
+                     </div>
+                     <div class="col-md-6">
+                        <div class="profile-view-ed-info">
+                            <h3>CONTACT INFO</h3>
+                            <ul>
+                                <li><span>Email ID</span></li>
+                                <li><span>{{user.email}}</span></li>
+                            </ul>
+                            <p>
+                                Used for session notifications and other updates Will also be used as a backup number in case of audio issues during your sessions. You can choose a different In-session backup number here
+                            </p>
+                        </div>  
+                     </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+<div id="change" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+       <div class="modal-content">
+          <div class="modal-header bg-green">
+             <h5 class="modal-title white" id="titleText">Change Password</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span  class="white" aria-hidden="true">×</span>
+             </button> 
+          </div>
+          <div class="modal-body">
+            <form (ngSubmit)="onChangeStudentPassword()" [formGroup]="changeStudentPasswordForm">
+             <div class="model-content">
+                <app-custom-password
+                  label="Current Password"
+                  formControlName="oldPassword"
+                >
+                </app-custom-password>
+                <app-custom-password
+                  label="New Password"
+                  formControlName="newPassword"
+                >
+                </app-custom-password>
+                <app-custom-password
+                  label="Confirm Password"
+                  formControlName="confirmPassword"
+                >
+                </app-custom-password>
+                <div class="form-group mt-4">
+                    <div class="text-center">
+                        <button [disabled]="changeStudentPasswordForm.invalid" class="btn-primary-gard btn-md">Save</button>
+                    </div>
+                </div>
+             </div>
+            </form>
+
+          </div>
+       </div>
+    </div>
+ </div>

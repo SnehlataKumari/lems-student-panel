@@ -1,0 +1,258 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="mdk-header-layout__content page-content">
+    <div class="pt-48pt pb-48pt">
+       <div class="container-fluid">
+            <div class="profile-card padding-33">
+                <div class="row">
+                     <div class="col-md-12">
+                        <div class="prfl-title">
+                            <h3>Edit Profile</h3>
+                        </div>
+                     </div>
+                </div>
+                <form [formGroup]="form" (submit)="onSubmit()">
+                  
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="prfl-stdnt" formGroupName="user">
+                            <h5>Student Details</h5>
+                            <div class="form-group form-rem">
+                                 <label>First Name*</label> 
+                                 <input type="text" formControlName="firstName" class="form-control">
+                                 <show-errors [control]="form.get('user.firstName')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Last Name*</label>
+                                <input type="text" formControlName="lastName" class="form-control" >
+                                <show-errors [control]="form.get('user.lastName')"></show-errors>
+                           </div>
+
+                           <div class="form-group form-rem">
+                              <label>Gender</label>
+                              <select formControlName="gender" class="form-control arrow1">
+                                  <option  *ngFor="let gender of genders" [value]="gender.value">{{gender.viewValue}}</option>
+                              </select>
+                          </div>
+                          <show-errors [control]="form.get('user.gender')"></show-errors>
+                        </div>
+
+                        <div class="form-group form-rem" formGroupName="student">
+                            <label>Preferred Languages</label>
+                            <select formControlName="preferedLanguage" class="form-control arrow1">
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                            <show-errors [control]="form.get('student.preferedLanguage')"></show-errors>
+                        </div>
+                    </div>
+           
+                    <div class="offset-md-1 col-md-4" formGroupName="student">
+                        <div class="prfl-stdnt" formGroupName="education">
+                            <h5>Education</h5>
+                            
+                           <div class="form-group form-rem">
+                                <label>Board*</label>
+                                <select class="form-control arrow1" formControlName="board">
+                                    <option>CBSE</option>
+                                </select>
+                                <show-errors [control]="form.get('student.education.board')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Grade*</label>
+                                <select class="form-control arrow1" formControlName="grade">
+                                    <option>Class 5</option>
+                                </select>
+                                <show-errors [control]="form.get('student.education.grade')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Target Exam</label>
+                                <select class="form-control arrow1" formControlName="targetExam">
+                                    <option>NEET</option>
+                                </select>
+                                <show-errors [control]="form.get('student.education.targetExam')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>School</label>
+                                <select class="form-control arrow1" formControlName="school">
+                                    <option>DDPS</option>
+                                </select>
+                                <show-errors [control]="form.get('student.education.school')"></show-errors>
+                            </div>
+                            <div class="form-group">
+                                <p class="theme1">Your primary number: <span class="theme">+91 {{authService.user.phone}}</span></p>
+                            </div>
+                            <!-- <small *ngIf="form.get('phone').hasError('pattern') && form.get('phone').touched"
+                              id="passwordHelpBlock" class="form-text text-danger">
+                              Mobile number must be 10 digits.
+                            </small>
+                            <show-errors [control]="form.get('phone')"></show-errors> -->
+                        </div> 
+                    </div>
+                </div>
+                 
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="prfl-gaurd-detail">
+                            <h5>Guardian Details</h5>
+                            <div class="custom-control custom-checkbox" formGroupName="student">
+                                <input type="checkbox" class="custom-control-input"
+                                    id="checkbox-signin" checked formControlName="isThisParentLogin">
+                                <label class="custom-control-label" for="checkbox-signin">Is this parent login?</label>
+                            </div> 
+                            <show-errors [control]="form.get('student.isThisParentLogin')"></show-errors>
+                        </div>
+                     </div>   
+                </div>
+                <div class="bg-gray" formGroupName="student">
+                    <ng-container formArrayName="guardians">
+                        <div class="row" *ngFor="let guardian of guardians.controls; index as i">
+                            <div class="col-md-4" [formGroupName]="i">
+                                <div class="form-group form-rem">
+                                    <label>Select Guardian Type*</label>
+                                    <select class="form-control arrow1" formControlName="guardianType">
+                                        <option value="">Select</option>
+                                        <option value="DDPS">DDPS</option>
+                                        <option value="DDPS2">DDPS2</option>
+                                    </select>
+                                </div>
+                                <show-errors [control]="form.get(['student', 'guardians', i, 'guardianType'])"></show-errors>
+                                <div class="form-group form-rem">
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" formControlName="firstName">
+                                </div>
+                                <show-errors [control]="form.get(['student', 'guardians', i, 'firstName'])"></show-errors>
+                                <div class="form-group form-rem">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" formControlName="lastName">
+                                </div>
+                                <show-errors [control]="form.get(['student', 'guardians', i, 'lastName'])"></show-errors>
+                                <div class="form-group form-rem">
+                                    <label>Phone</label>
+                                    <div class="d-flex">
+                                        <div class="ctry-name">
+                                            <select class="form-control arrow1">
+                                                <option>+91</option>
+                                            </select>
+                                        </div>
+                                        <div class="ctry-no">
+                                            <input type="text" formControlName="mobileNumber" class="form-control">
+                                            <show-errors [control]="form.get(['student', 'guardians', i, 'mobileNumber'])"></show-errors>
+                                            <small *ngIf="form.get(['student', 'guardians', i, 'mobileNumber']).hasError('pattern') && form.get(['student', 'guardians', i, 'mobileNumber']).touched" id="passwordHelpBlock"
+                                              class="form-text text-danger">
+                                              Mobile number must be 10 digits.
+                                            </small>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="form-group form-rem">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" formControlName="email">
+                                  </div>
+                                  <show-errors [control]="form.get(['student', 'guardians', i, 'email'])"></show-errors>
+                            </div>
+                            <div class="offset-md-2 col-md-5" >
+                                <div class="remov-gaurd">
+                                    <button type="button" class="btn-danger-gard" (click)="guardians.removeAt(i)">
+                                        Remove Guardian
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </ng-container>
+                </div>
+              
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="prfl-add mt-4 mb-4">
+                            <button type="button" class="btn-primary-gard" (click)="onAddMoreGuardian()">
+                                Add Guardian
+                            </button>
+                        </div>
+                    </div>
+         
+                    <div class="col-md-4" formGroupName="student">
+                        <div class="prfl-stdnt" formGroupName="address">
+                            <h5>Address</h5>
+                            <div class="form-group form-rem">
+                                 <label>Street Address*</label> 
+                                 <input type="text" class="form-control" formControlName="streetAddress">
+                                 <show-errors [control]="form.get('student.address.streetAddress')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Street Address Line 2</label>
+                                <input type="text" class="form-control" formControlName="streetAddress2">
+                                <show-errors [control]="form.get('student.address.streetAddress2')"></show-errors>
+                           </div>
+                           <div class="form-group form-rem">
+                                <label>City*</label>
+                                <input type="text" class="form-control" formControlName="city">
+                                <show-errors [control]="form.get('student.address.city')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>State*</label>
+                                <input type="text" class="form-control" formControlName="state">
+                                <show-errors [control]="form.get('student.address.state')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Country*</label>
+                                <input type="text" class="form-control" formControlName="country">
+                                <show-errors [control]="form.get('student.address.country')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Pin Code*</label>
+                                <input type="text" class="form-control" formControlName="pincode">
+                                <show-errors [control]="form.get('student.address.pincode')"></show-errors>
+                            </div>
+                        </div>
+                    </div>
+                     
+               
+                    <div class="offset-md-1 col-md-4" formGroupName="student">
+                        <div class="prfl-stdnt" formGroupName="studentActivities">
+                            <h5>Student Activities</h5>
+                            
+                           <div class="form-group form-rem">
+                                <label>Interests*</label>
+                                <input type="text" formControlName="interest" class="form-control">
+                                <show-errors [control]="form.get('student.studentActivities.interest')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Past performance</label>
+                                <input type="text" formControlName="pastPerformances" class="form-control">
+                                <show-errors [control]="form.get('student.studentActivities.pastPerformances')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>School Activities</label>
+                                <input type="text" class="form-control" formControlName="schoolActivities">
+                                <show-errors [control]="form.get('student.studentActivities.schoolActivities')"></show-errors>
+                            </div>
+                            <div class="form-group form-rem">
+                                <label>Strengths</label>
+                                <input type="text" class="form-control" formControlName="strengths">
+                                <show-errors [control]="form.get('student.studentActivities.strengths')"></show-errors>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-5 mx-auto">
+                          <div class="text-center">
+                            <button
+                                class="btn-primary-gard mr-4">
+                                Save
+                            </button>
+                            <button type="button" routerLink="/home/profile-view" class="btn-cancel-gard">
+                                Cancel
+                            </button>
+                          </div>
+                    </div>
+                </div>
+                
+                </form>
+            </div>
+       </div>
+    </div>
+</div>
+<app-footer></app-footer>

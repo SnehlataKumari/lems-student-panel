@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.ng-invalid:not(form):not(div).ng-touched{
+    border: solid 1px red !important;
+}
+/* 
+app-custom-password.ng-invalid input {
+    border: solid 1px red !important;
+} */

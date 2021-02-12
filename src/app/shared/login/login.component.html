@@ -1,0 +1,81 @@
+<div class="authentication-bg">
+  <div class="account-pages py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9">
+                <div class="card1">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-md-6 loging-pd">
+                                <div class="mx-auto mb-4">
+                                    <a routerLink="/">
+                                        <img src="assets/images/icon/logo_login.svg"  class="b-r-4 img-100 img-fluid" alt="" height="" />
+                                    </a>
+                                </div> 
+                                <h6 class="h5 mb-0 mt-4">Welcome back!</h6>
+                                <!-- <p class="text-muted mt-1 mb-4">Enter your email address and password.</p> -->
+                                <form class="authentication-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label class="form-control-label">Enter email</label>
+                                        <div class="input-group input-group-merge">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> 
+                                                    <img src="assets/images/icon/mail.svg" width="20px" height="20px">
+                                                </span>
+                                            </div>
+                                            <input type="text" formControlName="email" class="form-control" id="email" placeholder="Enter your email">
+                                        </div>
+                                        <show-errors [control]="loginForm.get('email')"></show-errors>
+                                    </div>
+  
+                                    <app-custom-password label="Enter password" formControlName="password"></app-custom-password>
+                                    <show-errors [control]="loginForm.get('password')"></show-errors>
+
+                                    <div class="form-group mt-4 mb-4">
+                                        <a routerLink="/otp-login" class="forgot-password float-left">Otp Login</a>
+                                        <a routerLink="/forgot-password" class="forgot-password float-right">Forgot password?</a>
+                                    </div>
+                                    <div class="form-group mt-2 mb-4 text-center">
+                                        <button
+                                        [disabled]="loginForm.invalid"
+                                        class="btn btn-block btn-filled form-btn">
+                                            <span>Login</span>
+                                        </button>
+                                    </div>
+                                
+                                    <div class="form-group  mt-4 mb-0 text-center">
+                                        <button type="button" class="btn btn-outline-dark" (click)="googleLogin()" role="button"
+                                            style="text-transform:none">
+                                            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                                                src="assets/images/icon/search.svg" />
+                                            Login with Google
+                                        </button>
+                                    </div>
+                                </form> 
+                            </div>
+                            <div class="col-lg-6 d-none d-md-inline-block">
+                                <div class="auth-page-sidebar">
+                                    <div class="overlay"></div>
+                                </div>
+                            </div>
+                          
+                        </div> 
+                    </div> <!-- end card-body -->
+                </div>
+            </div> <!-- end col -->
+            <div class="col-md-10">
+                <div class="mt-3 form-group mb-0 text-center">
+                    <p class="mb-0"><span class="dont">Don't have an account?</span> <a class="white font-weight-bold ml-1" routerLink="/signup">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+</div>
+
+

@@ -1,0 +1,94 @@
+
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start" data-position="left" data-domfactory-upgraded="mdk-drawer" data-opened="">
+        <div id="header" class="mdk-header js-mdk-header mb-0"  data-domfactory-upgraded="mdk-header" style="padding-top: 64px;">
+            <div class="mdk-header__bg">
+                <div class="mdk-header__bg-front"></div>
+                <div class="mdk-header__bg-rear"></div>
+            </div>
+            <div class="mdk-header__content">
+                <div class="navbar navbar-expand  pr-0 navbar-dark-dodger-blue navbar-shadow mdk-header--fixed" id="default-navbar" data-primary="data-primary">
+                    <!-- Navbar Brand -->
+                    <button class="navbar-toggler w-auto mr-16pt rounded-0" type="button" data-toggle="sidebar">
+                        <span class="material-icons">short_text</span>
+                    </button>
+                    <a class="navbar-brand mr-16pt" routerLink="/home/dashboard">
+                        
+                        <img src="assets/images/logo_deshboard.png" class="img-fluid wp-90"  alt="logo" />
+                    </a>
+                    <ul class="nav pc-nav navbar-nav d-none d-sm-flex flex justify-content-start ml-4rem">
+                        <li class="nav-item pointer">
+                            <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  routerLink="/home/dashboard"> 
+                               <span class="sidebar-menu-text"> 
+                                My Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item pointer">
+                            <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"  routerLink="/test/test">
+                                <span class="sidebar-menu-text">
+                                    <div class="m-new">New</div>
+                                    My Sessions</span>
+                            </a>  
+                        </li>
+                        <li class="nav-item pointer">
+                            <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                               <span class="sidebar-menu-text">Calendar</span> 
+                            </a> 
+                        </li>
+                        <li class="pointer nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false" aria-expanded="false"> <span class="sidebar-menu-text">My Test<img src="assets/images/drop_down_tab.png" height="6px" class="ml-2"></span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item pointer border-bottom">Content Library</a>
+                                <a class="dropdown-item pointer">How to Attemp Test</a>
+                            </div>
+                        </li>
+                        <li class="pointer nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false" aria-expanded="false"><span class="sidebar-menu-text">Study Material<img src="assets/images/drop_down_tab.png" height="6px" class="ml-2"></span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item pointer border-bottom"><span>NCERT Solution</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Year Paper</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Mock Test </span><img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Sample Paper</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Reference Book Solution </span><img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a> 
+                                <a class="dropdown-item pointer border-bottom"><span>ICSE Solution </span><img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>School Syllabus</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Revision Notes</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer border-bottom"><span>Important Questions</span> <img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                                <a class="dropdown-item pointer"><span>Math Formula Sheets</span><img src="assets/images/icon/right_arrow_blue.svg" width="7px" class="float-right"></a>
+                            </div>
+                        </li>
+                        <li class="pointer nav-item">
+                            <a class="nav-link"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                                <span class="sidebar-menu-text">
+                                    <div class="s-new">New</div>
+                                    Free Classes</span> 
+                            </a>
+                        </li>
+                        <li class="pointer nav-item">
+                            <a class="nav-link"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                                <span class="sidebar-menu-text">My Report</span> 
+                            </a>
+                        </li>
+                        <li class="pointer nav-item">
+                            <a class="nav-link"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                                <span class="sidebar-menu-text">Help</span> 
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pointer nav navbar-nav flex-nowrap d-flex mr-16pt">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                               <span> <img [src]="(authService.$user | async).profileImage ? (authService.$user | async).profileImage : 'assets/images/icon/user_placeholder_header.svg'" height="40px" width="40px" class="r-50 mr-2"> {{(authService.$user | async ).firstName}} {{(authService.$user | async ).lastName}} <img src="assets/images/drop_down_tab.png" height="6px" class="ml-2"></span> 
+                            </a> 
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item pointer border-bottom" routerLink="/home/profile-view">My Profile</a>
+                                <a routerLinkActive="/profile/ProfileViewComponent" class="dropdown-item pointer border-bottom">My Account</a>
+                                <a (click)="onLogout()" class="dropdown-item pointer">Log Out</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+ 

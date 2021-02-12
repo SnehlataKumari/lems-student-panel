@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="mail_" data-name="mail " transform="translate(-330 -575)">
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="30" height="30" transform="translate(330 575)" fill="rgba(255,36,36,0)"/>
+    <g id="mail_2" data-name="mail " transform="translate(330 578)">
+      <path id="Path_48743" data-name="Path 48743" d="M29,4H5A3,3,0,0,0,2.015,7L2,25a3.009,3.009,0,0,0,3,3H29a3.009,3.009,0,0,0,3-3V7A3.009,3.009,0,0,0,29,4ZM27.5,25H6.5A1.5,1.5,0,0,1,5,23.5V10.281l10.453,6.68a2.971,2.971,0,0,0,3.18,0L29,10.281V23.5A1.5,1.5,0,0,1,27.5,25ZM17,14.5,5,7H29Z" transform="translate(-2 -4)" fill="#666"/>
+    </g>
+  </g>
+</svg>
